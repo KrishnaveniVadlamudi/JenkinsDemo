@@ -20,4 +20,10 @@ public class LoginTestTest extends LoginPage {
 //	assertTrue("true");
 	  System.out.println("Function Executing");
   }
+@Test
+public void f1() {
+
+	  System.out.println("Function 1 Executing");
+	//  assert.assertTrue(true);
+ }
 }
