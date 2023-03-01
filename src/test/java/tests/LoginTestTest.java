@@ -40,4 +40,10 @@ public void f3() {
 	  System.out.println("Function 3 Executing");
 
  }
+@Test
+public void f4() {
+
+	  System.out.println("Function 4 Executing");
+
+ }
 }
