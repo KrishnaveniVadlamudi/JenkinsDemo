@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="2" passed="1" failed="1" skipped="0">
+<testng-results ignored="0" total="3" passed="2" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-03-01T09:57:09 PST" name="Default suite" finished-at="2023-03-01T09:57:48 PST" duration-ms="39591">
+  <suite started-at="2023-03-01T10:06:25 PST" name="Default suite" finished-at="2023-03-01T10:06:31 PST" duration-ms="6014">
     <groups>
     </groups>
-    <test started-at="2023-03-01T09:57:09 PST" name="Default test" finished-at="2023-03-01T09:57:48 PST" duration-ms="39591">
+    <test started-at="2023-03-01T10:06:25 PST" name="Default test" finished-at="2023-03-01T10:06:31 PST" duration-ms="6014">
       <class name="tests.LoginTestTest">
-        <test-method is-config="true" signature="Setup()[pri:0, instance:tests.LoginTestTest@654f0d9c]" started-at="2023-03-01T09:57:09 PST" name="Setup" finished-at="2023-03-01T09:57:09 PST" duration-ms="10" status="PASS">
+        <test-method is-config="true" signature="Setup()[pri:0, instance:tests.LoginTestTest@6a400542]" started-at="2023-03-01T10:06:26 PST" name="Setup" finished-at="2023-03-01T10:06:26 PST" duration-ms="9" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Setup -->
-        <test-method signature="f()[pri:0, instance:tests.LoginTestTest@654f0d9c]" started-at="2023-03-01T09:57:09 PST" name="f" finished-at="2023-03-01T09:57:48 PST" duration-ms="39531" status="FAIL">
+        <test-method signature="f()[pri:0, instance:tests.LoginTestTest@6a400542]" started-at="2023-03-01T10:06:26 PST" name="f" finished-at="2023-03-01T10:06:31 PST" duration-ms="5928" status="FAIL">
           <exception class="org.openqa.selenium.NoSuchWindowException">
             <message>
               <![CDATA[no such window: target window already closed
@@ -20,9 +20,9 @@ from unknown error: web view not found
 Build info: version: '4.8.1', revision: '8ebccac989'
 System info: os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '12.6.2', java.version: '17.0.2'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [a9517206570ab13664e8f53812480453, maximizeCurrentWindow {}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 110.0.5481.177, chrome: {chromedriverVersion: 110.0.5481.77 (65ed616c6e8e..., userDataDir: /var/folders/72/zfhcvjmn2yb...}, goog:chromeOptions: {debuggerAddress: localhost:49447}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: MAC, proxy: Proxy(), se:cdp: ws://localhost:49447/devtoo..., se:cdpVersion: 110.0.5481.177, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: a9517206570ab13664e8f53812480453]]>
+Command: [89787b5d7f3494bc21928c66624d390b, maximizeCurrentWindow {}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 110.0.5481.177, chrome: {chromedriverVersion: 110.0.5481.77 (65ed616c6e8e..., userDataDir: /var/folders/72/zfhcvjmn2yb...}, goog:chromeOptions: {debuggerAddress: localhost:49983}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: MAC, proxy: Proxy(), se:cdp: ws://localhost:49983/devtoo..., se:cdpVersion: 110.0.5481.177, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 89787b5d7f3494bc21928c66624d390b]]>
             </message>
             <full-stacktrace>
               <![CDATA[org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
@@ -31,9 +31,9 @@ from unknown error: web view not found
 Build info: version: '4.8.1', revision: '8ebccac989'
 System info: os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '12.6.2', java.version: '17.0.2'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [a9517206570ab13664e8f53812480453, maximizeCurrentWindow {}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 110.0.5481.177, chrome: {chromedriverVersion: 110.0.5481.77 (65ed616c6e8e..., userDataDir: /var/folders/72/zfhcvjmn2yb...}, goog:chromeOptions: {debuggerAddress: localhost:49447}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: MAC, proxy: Proxy(), se:cdp: ws://localhost:49447/devtoo..., se:cdpVersion: 110.0.5481.177, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: a9517206570ab13664e8f53812480453
+Command: [89787b5d7f3494bc21928c66624d390b, maximizeCurrentWindow {}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 110.0.5481.177, chrome: {chromedriverVersion: 110.0.5481.77 (65ed616c6e8e..., userDataDir: /var/folders/72/zfhcvjmn2yb...}, goog:chromeOptions: {debuggerAddress: localhost:49983}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: MAC, proxy: Proxy(), se:cdp: ws://localhost:49983/devtoo..., se:cdpVersion: 110.0.5481.177, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 89787b5d7f3494bc21928c66624d390b
 at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
 at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -85,10 +85,14 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- f -->
-        <test-method signature="f1()[pri:0, instance:tests.LoginTestTest@654f0d9c]" started-at="2023-03-01T09:57:48 PST" name="f1" finished-at="2023-03-01T09:57:48 PST" duration-ms="1" status="PASS">
+        <test-method signature="f1()[pri:0, instance:tests.LoginTestTest@6a400542]" started-at="2023-03-01T10:06:31 PST" name="f1" finished-at="2023-03-01T10:06:31 PST" duration-ms="8" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- f1 -->
+        <test-method signature="f2()[pri:0, instance:tests.LoginTestTest@6a400542]" started-at="2023-03-01T10:06:31 PST" name="f2" finished-at="2023-03-01T10:06:31 PST" duration-ms="5" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- f2 -->
       </class> <!-- tests.LoginTestTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
