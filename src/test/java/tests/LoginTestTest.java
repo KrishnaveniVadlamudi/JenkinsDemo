@@ -24,20 +24,20 @@ public class LoginTestTest extends LoginPage {
 public void f1() {
 
 	  System.out.println("Function 1 Executing");
-	//  assert.assertTrue(true);
+
  }
 
 @Test
 public void f2() {
 
 	  System.out.println("Function 2 Executing");
-	//  assert.assertTrue(true);
+
  }
 
 @Test
 public void f3() {
 
 	  System.out.println("Function 3 Executing");
-	//  assert.assertTrue(true);
+
  }
 }
