@@ -1,0 +1,7 @@
+tests/LoginTest.class
+Pages/RegistrationPage.class
+TestBase/BaseClass.class
+tests/RegistrationTest.class
+Pages/LoginPage.class
+tests/LoginTestTest.class
+Utilities/ExcelReader.class
