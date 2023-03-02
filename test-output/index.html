@@ -92,7 +92,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">4 methods, 1 failed,   3 passed</span>
+                    <span class="method-stats">5 methods, 1 failed,   4 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title failed">Failed methods</span>
@@ -130,6 +130,11 @@
                         <a href="#" panel-name="suite-Default_suite" title="tests.LoginTestTest" class="method navigator-link" hash-for-method="f3">f3</a> <!-- method navigator-link -->
                       </span>
                       <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="tests.LoginTestTest" class="method navigator-link" hash-for-method="f4">f4</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
                     </div> <!-- method-list-content passed suite-Default_suite -->
                   </li>
                 </ul>
@@ -159,9 +164,9 @@ from unknown error: web view not found
 Build info: version: &apos;4.8.1&apos;, revision: &apos;8ebccac989&apos;
 System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;12.6.2&apos;, java.version: &apos;17.0.2&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [6d736b0f9f9a67d534450f15bcfb841c, maximizeCurrentWindow {}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 110.0.5481.177, chrome: {chromedriverVersion: 110.0.5481.77 (65ed616c6e8e..., userDataDir: /var/folders/72/zfhcvjmn2yb...}, goog:chromeOptions: {debuggerAddress: localhost:50155}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: MAC, proxy: Proxy(), se:cdp: ws://localhost:50155/devtoo..., se:cdpVersion: 110.0.5481.177, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 6d736b0f9f9a67d534450f15bcfb841c
+Command: [3b136319ed6d100177b184c488a15772, maximizeCurrentWindow {}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 110.0.5481.177, chrome: {chromedriverVersion: 110.0.5481.77 (65ed616c6e8e..., userDataDir: /var/folders/72/zfhcvjmn2yb...}, goog:chromeOptions: {debuggerAddress: localhost:53581}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: MAC, proxy: Proxy(), se:cdp: ws://localhost:53581/devtoo..., se:cdpVersion: 110.0.5481.177, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 3b136319ed6d100177b184c488a15772
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -240,12 +245,19 @@ Session ID: 6d736b0f9f9a67d534450f15bcfb841c
                   <span class="method-name">f3</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="f4">
+                  </a> <!-- f4 -->
+                  <span class="method-name">f4</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
           </div> <!-- suite-Default_suite-class-passed -->
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">/private/var/folders/72/zfhcvjmn2yb4f5r74ykdnkx00000gn/T/testng-eclipse-885987333/testng-customsuite.xml</span>
+            <span class="header-content">/private/var/folders/72/zfhcvjmn2yb4f5r74ykdnkx00000gn/T/testng-eclipse--318677994/testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -294,28 +306,32 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(4);
+data.addRows(5);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'f')
 data.setCell(0, 2, 'tests.LoginTestTest')
-data.setCell(0, 3, 3487);
+data.setCell(0, 3, 3991);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'f1')
+data.setCell(1, 1, 'f2')
 data.setCell(1, 2, 'tests.LoginTestTest')
-data.setCell(1, 3, 5);
+data.setCell(1, 3, 12);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'f3')
+data.setCell(2, 1, 'f4')
 data.setCell(2, 2, 'tests.LoginTestTest')
-data.setCell(2, 3, 2);
+data.setCell(2, 3, 5);
 data.setCell(3, 0, 3)
-data.setCell(3, 1, 'f2')
+data.setCell(3, 1, 'f1')
 data.setCell(3, 2, 'tests.LoginTestTest')
-data.setCell(3, 3, 1);
+data.setCell(3, 3, 2);
+data.setCell(4, 0, 4)
+data.setCell(4, 1, 'f3')
+data.setCell(4, 2, 'tests.LoginTestTest')
+data.setCell(4, 3, 1);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 3 seconds</span>
+              <span class="suite-total-time">Total running time: 4 seconds</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -350,19 +366,23 @@ return data;
                 <img src="failed.png">
                 </img>
                 <span class="method-name">f</span>
-                <span class="method-start">22 ms</span>
+                <span class="method-start">20 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">f1</span>
-                <span class="method-start">3517 ms</span>
+                <span class="method-start">4022 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">f2</span>
-                <span class="method-start">3524 ms</span>
+                <span class="method-start">4027 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">f3</span>
-                <span class="method-start">3527 ms</span>
+                <span class="method-start">4048 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">f4</span>
+                <span class="method-start">4052 ms</span>
               </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
