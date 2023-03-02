@@ -18,7 +18,7 @@ pipeline {
  
       }
       stage('Test'){
-      sh 'make check'
+       sh 'mvn clean package'
       }
     }
   }
