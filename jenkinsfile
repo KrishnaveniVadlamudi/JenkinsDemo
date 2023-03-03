@@ -1,21 +1,27 @@
-pipeline {
-def pomfilepath='https://github.com/KrishnaveniVadlamudi/JenkinsDemo/blob/main/pom.xml'
-  agent any {
-   tools { 
-        maven 'MAVEN3.8.7' 
-        jdk 'JAVA1.7' 
+node {
+    // Get Artifactory server instance, defined in the Artifactory Plugin administration page.
+    def server = Artifactory.server "SERVER_ID"
+    // Create an Artifactory Maven instance.
+    def rtMaven = Artifactory.newMavenBuild()
+    def buildInfo
+
+    stage('Clone sources') {
+        git url: 'https://github.com/KrishnaveniVadlamudi/JenkinsDemo.git'
     }
-    
-   stages {
-   
-     stage('Build') {
-         git 'https://github.com/KrishnaveniVadlamudi/JenkinsDemo.git'
-      }
-      stage('Test'){
-      sh ' mvn -f pomfilepath clean test' 
-      }
-      
+
+    stage('Artifactory configuration') {
+        // Tool name from Jenkins configuration
+        rtMaven.tool = "Maven3.8.7"
+        // Set Artifactory repositories for dependencies resolution and artifacts deployment.
+        rtMaven.deployer releaseRepo:'libs-release-local', snapshotRepo:'libs-snapshot-local', server: server
+        rtMaven.resolver releaseRepo:'libs-release', snapshotRepo:'libs-snapshot', server: server
     }
-    
-  }
+
+    stage('Maven build') {
+        buildInfo = rtMaven.run pom: 'JenkinsDemo/pom.xml', goals: 'clean install'
+    }
+
+    stage('Publish build info') {
+        server.publishBuildInfo buildInfo
+    }
 }
