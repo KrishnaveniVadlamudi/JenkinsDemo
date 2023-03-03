@@ -7,11 +7,13 @@ pipeline {
    stages {
      stage('Build') {
          git 'https://github.com/KrishnaveniVadlamudi/JenkinsDemo.git'
-         sh 'mvn -Dmaven.test.failure.ignore=true install' 
+    
+         
 
       }
       stage('Test'){
-       sh 'mvn clean build'
+      sh ' mvn -f pom.xml clean install' 
+     
       }
     }
   }
