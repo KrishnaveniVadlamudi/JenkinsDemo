@@ -5,17 +5,17 @@ def pomfilepath='https://github.com/KrishnaveniVadlamudi/JenkinsDemo/blob/main/p
         maven 'MAVEN3.8.7' 
         jdk 'JAVA1.7' 
     }
+    
    stages {
+   
      stage('Build') {
          git 'https://github.com/KrishnaveniVadlamudi/JenkinsDemo.git'
-    
-         
-
       }
       stage('Test'){
       sh ' mvn -f pomfilepath clean test' 
-     
       }
+      
     }
+    
   }
 }
