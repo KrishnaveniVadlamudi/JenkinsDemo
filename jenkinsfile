@@ -5,8 +5,12 @@ pipeline {
         JDK 'JAVA1.7' 
     }
    stages {
-   
-      stage('Build') {
+   stage('Initialize'){
+            steps{
+                echo "PATH = ${M2_HOME}/bin:${PATH}"
+                echo "M2_HOME = /opt/maven"
+            }
+        }      stage('Build') {
                    sh 'mvn -Dmaven.test.failure.ignore=true install' 
 
       }
