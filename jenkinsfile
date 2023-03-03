@@ -1,21 +1,17 @@
 pipeline {
   agent any {
    tools { 
-        Maven 'MAVEN3.8.7' 
+        maven 'MAVEN3.8.7' 
         JDK 'JAVA1.7' 
     }
    stages {
-   stage('Initialize'){
-            steps{
-                echo "PATH = ${M2_HOME}/bin:${PATH}"
-                echo "M2_HOME = /opt/maven"
-            }
-        }      stage('Build') {
-                   sh 'mvn -Dmaven.test.failure.ignore=true install' 
+     stage('Build') {
+         git 'https://github.com/KrishnaveniVadlamudi/JenkinsDemo.git'
+         sh 'mvn -Dmaven.test.failure.ignore=true install' 
 
       }
       stage('Test'){
-       sh 'mvn clean package'
+       sh 'mvn clean build'
       }
     }
   }
