@@ -1,31 +1,33 @@
 pipeline {
-agent any
+    agent any
 
-node {
-    // Get Artifactory server instance, defined in the Artifactory Plugin administration page.
-    def server = Artifactory.server "SERVER_ID"
-    // Create an Artifactory Maven instance.
-    def rtMaven = Artifactory.newMavenBuild()
-    def buildInfo
-
-    stage('Clone sources') {
-        git url: 'https://github.com/KrishnaveniVadlamudi/JenkinsDemo.git'
+    tools {
+        // Install the Maven version configured as "M3" and add it to the path.
+        maven "MAVEN3.8.7"
     }
 
-    stage('Artifactory configuration') {
-        // Tool name from Jenkins configuration
-        rtMaven.tool = "MAVEN3.8.7"
-        // Set Artifactory repositories for dependencies resolution and artifacts deployment.
-        rtMaven.deployer releaseRepo:'libs-release-local', snapshotRepo:'libs-snapshot-local', server: server
-        rtMaven.resolver releaseRepo:'libs-release', snapshotRepo:'libs-snapshot', server: server
-    }
+    stages {
+        stage('Build') {
+            steps {
+                // Get some code from a GitHub repository
+                git branch: 'main', credentialsId: 'krishnaveni1', url: 'https://github.com/KrishnaveniVadlamudi/JenkinsDemo.git'
+                
 
-    stage('Maven build') {
-        buildInfo = rtMaven.run pom: 'JenkinsDemo/pom.xml', goals: 'clean test'
-    }
+                // Run Maven on a Unix agent.
+                sh "mvn -Dmaven.test.failure.ignore=true clean package"
 
-    stage('Publish build info') {
-        server.publishBuildInfo buildInfo
+                // To run Maven on a Windows agent, use
+                // bat "mvn -Dmaven.test.failure.ignore=true clean package"
+            }
+
+            post {
+                // If Maven was able to run the tests, even if some of the test
+                // failed, record the test results and archive the jar file.
+                success {
+                    junit '**/target/surefire-reports/TEST-*.xml'
+                    archiveArtifacts 'target/*.jar'
+                }
+            }
+        }
     }
-}
 }
